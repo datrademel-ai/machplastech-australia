@@ -1,0 +1,37 @@
+import Link from 'next/link'
+import Image from 'next/image'
+
+export default function Header() {
+  return (
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+      <nav className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
+        <Link href="/" className="flex items-center">
+          <Image 
+            src="/logo.png" 
+            alt="Machplastech" 
+            width={200} 
+            height={50}
+            className="h-12 w-auto"
+            priority
+          />
+        </Link>
+        
+        <ul className="hidden md:flex gap-8">
+          <li><Link href="/" className="text-gray-700 hover:text-blue-900 font-medium transition">Home</Link></li>
+          <li><Link href="/services" className="text-gray-700 hover:text-blue-900 font-medium transition">Services</Link></li>
+          <li><Link href="/industries" className="text-gray-700 hover:text-blue-900 font-medium transition">Industries</Link></li>
+          <li><Link href="/solutions" className="text-gray-700 hover:text-blue-900 font-medium transition">Solutions</Link></li>
+          <li><Link href="/about" className="text-gray-700 hover:text-blue-900 font-medium transition">About</Link></li>
+          <li><Link href="/contact" className="text-gray-700 hover:text-blue-900 font-medium transition">Contact</Link></li>
+        </ul>
+
+        {/* Mobile menu button */}
+        <button className="md:hidden text-gray-700">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+  )
+}
