@@ -7,7 +7,6 @@ export default function Home() {
       <section className="bg-gradient-to-br from-blue-900 to-blue-600 text-white py-24 px-8 text-center">
         <h1 className="text-5xl font-bold mb-4">MACHPLASTECH Australia</h1>
         <p className="text-2xl mb-2 font-light">Your Gateway to Korean Industrial Innovation</p>
-        <p className="text-lg mb-1 opacity-95">호주 기업과 한국 제조기술을 연결하는 산업 비즈니스 파트너</p>
         <p className="text-xl mb-8 font-semibold">Australia ↔ Korea Trade Bridge</p>
         <Link href="/contact" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg transition">
           Start Your Project →
@@ -22,28 +21,24 @@ export default function Home() {
           <div className="border border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition">
             <div className="text-5xl mb-4">🔍</div>
             <h3 className="text-xl font-bold mb-2 text-blue-900">Market Research</h3>
-            <p className="text-sm text-gray-600 mb-4">시장 조사</p>
             <p className="text-gray-700 text-sm">Australian market analysis, feasibility studies, competitor analysis, and regulatory review</p>
           </div>
 
           <div className="border border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition">
             <div className="text-5xl mb-4">🤝</div>
             <h3 className="text-xl font-bold mb-2 text-blue-900">Business Matching</h3>
-            <p className="text-sm text-gray-600 mb-4">비즈니스 매칭</p>
             <p className="text-gray-700 text-sm">Connect Korean manufacturers with Australian buyers and support partnership development</p>
           </div>
 
           <div className="border border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition">
             <div className="text-5xl mb-4">🚚</div>
             <h3 className="text-xl font-bold mb-2 text-blue-900">Logistics</h3>
-            <p className="text-sm text-gray-600 mb-4">물류 솔루션</p>
             <p className="text-gray-700 text-sm">Shipping coordination, warehousing, and delivery management across APAC</p>
           </div>
 
           <div className="border border-gray-200 rounded-xl p-8 text-center hover:shadow-lg transition">
             <div className="text-5xl mb-4">🔧</div>
             <h3 className="text-xl font-bold mb-2 text-blue-900">After-Sales</h3>
-            <p className="text-sm text-gray-600 mb-4">사후 지원</p>
             <p className="text-gray-700 text-sm">Technical support, parts supply, maintenance service, and ongoing assistance</p>
           </div>
         </div>
@@ -131,30 +126,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Why Choose Us Section - 통계 대신 강점 */}
       <section className="max-w-7xl mx-auto py-20 px-8">
         <div className="border border-gray-200 rounded-xl p-12">
-          <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Your Trusted Partner</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-blue-900">Why Choose Us</h2>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-900 mb-2">15+</div>
-              <div className="text-gray-600">Years<br />Korea-Australia Trade Experience</div>
+              <div className="text-5xl mb-4">🌉</div>
+              <h3 className="text-xl font-bold mb-3 text-blue-900">Cultural Bridge</h3>
+              <p className="text-gray-600">Bilingual team with deep understanding of both Korean and Australian business cultures</p>
             </div>
 
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-900 mb-2">50+</div>
-              <div className="text-gray-600">Projects<br />Successful Partnerships Delivered</div>
+              <div className="text-5xl mb-4">🔗</div>
+              <h3 className="text-xl font-bold mb-3 text-blue-900">Strong Network</h3>
+              <p className="text-gray-600">Established relationships with leading Korean manufacturers and Australian buyers</p>
             </div>
 
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-900 mb-2">100%</div>
-              <div className="text-gray-600">Bilingual<br />Korean & English Expertise</div>
+              <div className="text-5xl mb-4">📊</div>
+              <h3 className="text-xl font-bold mb-3 text-blue-900">Market Expertise</h3>
+              <p className="text-gray-600">In-depth knowledge of Australian market requirements and Korean capabilities</p>
             </div>
 
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-900 mb-2">2</div>
-              <div className="text-gray-600">Offices<br />Sydney + Seoul</div>
+              <div className="text-5xl mb-4">🌏</div>
+              <h3 className="text-xl font-bold mb-3 text-blue-900">Korea & Australia</h3>
+              <p className="text-gray-600">Direct support in both countries with local presence and understanding</p>
             </div>
           </div>
         </div>
