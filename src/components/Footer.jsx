@@ -7,11 +7,12 @@ export default function Footer() {
           <p className="text-gray-300 mb-2">Korea-Australia Industrial Gateway</p>
           <p className="text-gray-400">419 Malvern Rd</p>
           <p className="text-gray-400">South Yarra VIC 3141</p>
+          <p className="text-gray-400">Australia</p>
         </div>
 
         <div>
           <h3 className="text-xl font-bold mb-4 text-blue-400">Contact</h3>
-          <p className="text-gray-300 mb-2">Phone: +61 493 468 123</p>
+          <p className="text-gray-300 mb-2">Australia: +61 493 468 123</p>
           <p className="text-gray-300 mb-2">Email: admin@machplastech.com.au</p>
           <p className="text-gray-400 mt-4">Korea HQ: +82 10 7671-8123</p>
         </div>
