@@ -13,7 +13,7 @@ export default function About() {
         <div>
           <h2 className="text-3xl font-bold mb-6 text-blue-900">Our Story</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            Machplastech Australia serves as the vital bridge connecting Australian businesses with Korea's advanced industrial technology. As part of the Machplastech group with headquarters in Korea, we bring over 15 years of experience in international trade and industrial solutions.
+            Machplastech Australia serves as the vital bridge connecting Australian businesses with Korea's advanced industrial technology. As part of the Machplastech group with headquarters in Korea, we have consistently served as a trusted partner in international trade and industrial solutions over the years.
           </p>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Our mission is to facilitate successful business partnerships by providing comprehensive support throughout the entire process—from initial market research and partner matching to logistics coordination and ongoing after-sales support.
@@ -74,7 +74,6 @@ export default function About() {
           <div className="bg-white/10 rounded-lg p-8">
             <h3 className="text-2xl font-bold mb-4">🇰🇷 Korea Headquarters</h3>
             <p className="mb-2"><strong>Machplastech Co., Ltd.</strong></p>
-            <p className="mb-2">경상남도 양산시 상북면 석계산단 2길 113 A</p>
             <p className="mb-2">Phone: +82 10 7671-8123</p>
             <p className="mb-2">Email: admin@machplastech.com</p>
             <p className="mt-4 text-blue-200">Manufacturing, Engineering Plastics Distribution, Precision Machining</p>
