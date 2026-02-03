@@ -145,7 +145,7 @@ export default function Contact() {
           <div className="bg-gray-50 rounded-xl p-8">
             <h3 className="text-xl font-bold mb-4 text-blue-900">🇰🇷 Korea Headquarters</h3>
             <p className="text-gray-700 mb-2"><strong>Address:</strong></p>
-            <p className="text-gray-700 mb-4">경상남도 양산시 상북면 석계산단 2길 113 A<br/>Korea</p>
+            <p className="text-gray-700 mb-4">Kyung nam Yangsan <br/>Korea</p>
             
             <p className="text-gray-700 mb-2"><strong>Phone:</strong></p>
             <p className="text-gray-700 mb-4">+82 10 7671-8123</p>
