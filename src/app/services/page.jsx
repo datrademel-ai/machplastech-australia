@@ -13,7 +13,6 @@ export default function Services() {
         <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition">
           <div className="text-6xl mb-6">🔍</div>
           <h2 className="text-3xl font-bold mb-4 text-blue-900">Market Research</h2>
-          <p className="text-gray-600 mb-4">시장 조사 및 분석</p>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start">
               <span className="text-blue-900 mr-2">✓</span>
@@ -37,7 +36,6 @@ export default function Services() {
         <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition">
           <div className="text-6xl mb-6">🤝</div>
           <h2 className="text-3xl font-bold mb-4 text-blue-900">Business Matching</h2>
-          <p className="text-gray-600 mb-4">비즈니스 매칭 및 파트너십</p>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start">
               <span className="text-blue-900 mr-2">✓</span>
@@ -61,7 +59,6 @@ export default function Services() {
         <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition">
           <div className="text-6xl mb-6">🚚</div>
           <h2 className="text-3xl font-bold mb-4 text-blue-900">Logistics Solutions</h2>
-          <p className="text-gray-600 mb-4">물류 및 배송 관리</p>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start">
               <span className="text-blue-900 mr-2">✓</span>
@@ -85,7 +82,6 @@ export default function Services() {
         <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition">
           <div className="text-6xl mb-6">🔧</div>
           <h2 className="text-3xl font-bold mb-4 text-blue-900">After-Sales Support</h2>
-          <p className="text-gray-600 mb-4">사후 지원 및 유지보수</p>
           <ul className="space-y-3 text-gray-700">
             <li className="flex items-start">
               <span className="text-blue-900 mr-2">✓</span>
