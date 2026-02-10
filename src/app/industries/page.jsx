@@ -1,126 +1,92 @@
+import Image from 'next/image'
+
 export const metadata = {
   title: 'Industries We Serve - Machplastech Australia',
   description: 'Korean technology solutions for Australian agriculture, manufacturing, materials, and industrial sectors',
 }
 
 export default function Industries() {
+  const industries = [
+    {
+      title: 'Agriculture & Food Processing',
+      subtitle: 'Advanced automation solutions for modern farming',
+      image: '/images/industries/smart_farm.jpg',
+      color: 'text-green-600',
+      items: [
+        { name: 'Automated Harvesting Equipment', desc: 'Precision machinery for efficient crop collection' },
+        { name: 'Food Processing Machinery', desc: 'Hygienic and efficient processing systems' },
+        { name: 'Smart Farm Solutions', desc: 'IoT-enabled monitoring and control systems' },
+        { name: 'Sorting & Packaging Systems', desc: 'Automated quality control and packaging' }
+      ]
+    },
+    {
+      title: 'Manufacturing & Production',
+      subtitle: 'Cutting-edge manufacturing technology',
+      image: '/images/industries/cnc-machine.jpg',
+      color: 'text-blue-600',
+      items: [
+        { name: 'Industrial Automation Systems', desc: 'Complete factory automation solutions' },
+        { name: 'Precision Machining Equipment', desc: 'CNC and MCT for high-precision work' },
+        { name: 'Quality Control Systems', desc: 'Automated inspection and testing' },
+        { name: 'Production Line Integration', desc: 'End-to-end manufacturing solutions' }
+      ]
+    },
+    {
+      title: 'Advanced Materials',
+      subtitle: 'High-performance materials for demanding applications',
+      image: '/images/industries/materials.jpg',
+      color: 'text-purple-600',
+      items: [
+        { name: 'Engineering Plastics', desc: 'POM, PA6, ABS, MP5000, PTFE and more' },
+        { name: 'Semiconductor Materials', desc: 'High-purity components for chip manufacturing' },
+        { name: 'Specialized Components', desc: 'Custom-engineered parts for specific needs' },
+        { name: 'Material Testing & Certification', desc: 'Quality assurance services' }
+      ]
+    },
+    {
+      title: 'Industrial Equipment',
+      subtitle: 'Comprehensive industrial machinery solutions',
+      image: '/images/industries/industrial_robot.webp',
+      color: 'text-orange-600',
+      items: [
+        { name: 'Robotics & Automation', desc: 'Industrial robots for various applications' },
+        { name: 'Material Handling Systems', desc: 'Conveyors, lifts, and transport solutions' },
+        { name: 'Production Line Equipment', desc: 'Assembly and processing machinery' },
+        { name: 'Power & Control Systems', desc: 'Electrical and control infrastructure' }
+      ]
+    }
+  ]
+
   return (
     <div className="max-w-7xl mx-auto py-20 px-8">
       <h1 className="text-5xl font-bold text-center mb-6 text-blue-900">Industries We Serve</h1>
       <p className="text-xl text-center text-gray-600 mb-16">Korean Technology for Australian Industries</p>
 
       <div className="space-y-16">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-bold mb-4 text-blue-900">🌾 Agriculture & Food Processing</h2>
-            <p className="text-lg text-gray-600 mb-6">Advanced automation solutions for modern farming</p>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="text-green-600 font-bold mr-2">→</span>
-                <span><strong>Automated Harvesting Equipment:</strong> Precision machinery for efficient crop collection</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 font-bold mr-2">→</span>
-                <span><strong>Food Processing Machinery:</strong> Hygienic and efficient processing systems</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 font-bold mr-2">→</span>
-                <span><strong>Smart Farm Solutions:</strong> IoT-enabled monitoring and control systems</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 font-bold mr-2">→</span>
-                <span><strong>Sorting & Packaging Systems:</strong> Automated quality control and packaging</span>
-              </li>
-            </ul>
+        {industries.map((industry, i) => (
+          <div key={i} className={`grid md:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+            <div className={i % 2 === 1 ? 'md:order-2' : ''}>
+              <h2 className="text-3xl font-bold mb-4 text-blue-900">{industry.title}</h2>
+              <p className="text-lg text-gray-600 mb-6">{industry.subtitle}</p>
+              <ul className="space-y-3 text-gray-700">
+                {industry.items.map((item, j) => (
+                  <li key={j} className="flex items-start">
+                    <span className={`${industry.color} font-bold mr-2`}>→</span>
+                    <span><strong>{item.name}:</strong> {item.desc}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className={`relative h-64 rounded-xl overflow-hidden ${i % 2 === 1 ? 'md:order-1' : ''}`}>
+              <Image
+                src={industry.image}
+                alt={industry.title}
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
-          <div className="bg-gray-100 h-64 rounded-xl flex items-center justify-center text-gray-400">
-            [Agriculture Automation Image]
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1 bg-gray-100 h-64 rounded-xl flex items-center justify-center text-gray-400">
-            [Manufacturing Image]
-          </div>
-          <div className="order-1 md:order-2">
-            <h2 className="text-4xl font-bold mb-4 text-blue-900">🏭 Manufacturing & Production</h2>
-            <p className="text-lg text-gray-600 mb-6">Cutting-edge manufacturing technology</p>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="text-blue-600 font-bold mr-2">→</span>
-                <span><strong>Industrial Automation Systems:</strong> Complete factory automation solutions</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 font-bold mr-2">→</span>
-                <span><strong>Precision Machining Equipment:</strong> CNC and MCT for high-precision work</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 font-bold mr-2">→</span>
-                <span><strong>Quality Control Systems:</strong> Automated inspection and testing</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-blue-600 font-bold mr-2">→</span>
-                <span><strong>Production Line Integration:</strong> End-to-end manufacturing solutions</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-4xl font-bold mb-4 text-blue-900">🔬 Advanced Materials</h2>
-            <p className="text-lg text-gray-600 mb-6">High-performance materials for demanding applications</p>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="text-purple-600 font-bold mr-2">→</span>
-                <span><strong>Engineering Plastics:</strong> POM, PA6, PEEK, PPS, PTFE and more</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-purple-600 font-bold mr-2">→</span>
-                <span><strong>Semiconductor Materials:</strong> High-purity components for chip manufacturing</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-purple-600 font-bold mr-2">→</span>
-                <span><strong>Specialized Components:</strong> Custom-engineered parts for specific needs</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-purple-600 font-bold mr-2">→</span>
-                <span><strong>Material Testing & Certification:</strong> Quality assurance services</span>
-              </li>
-            </ul>
-          </div>
-          <div className="bg-gray-100 h-64 rounded-xl flex items-center justify-center text-gray-400">
-            [Materials Image]
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1 bg-gray-100 h-64 rounded-xl flex items-center justify-center text-gray-400">
-            [Industrial Equipment Image]
-          </div>
-          <div className="order-1 md:order-2">
-            <h2 className="text-4xl font-bold mb-4 text-blue-900">⚡ Industrial Equipment</h2>
-            <p className="text-lg text-gray-600 mb-6">Comprehensive industrial machinery solutions</p>
-            <ul className="space-y-3 text-gray-700">
-              <li className="flex items-start">
-                <span className="text-orange-600 font-bold mr-2">→</span>
-                <span><strong>Robotics & Automation:</strong> Industrial robots for various applications</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-600 font-bold mr-2">→</span>
-                <span><strong>Material Handling Systems:</strong> Conveyors, lifts, and transport solutions</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-600 font-bold mr-2">→</span>
-                <span><strong>Production Line Equipment:</strong> Assembly and processing machinery</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-orange-600 font-bold mr-2">→</span>
-                <span><strong>Power & Control Systems:</strong> Electrical and control infrastructure</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="mt-20 bg-gradient-to-r from-blue-900 to-blue-700 rounded-xl p-12 text-white text-center">
