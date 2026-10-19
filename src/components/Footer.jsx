@@ -1,33 +1,51 @@
+import Link from 'next/link'
+import Seal from '@/components/Seal'
+import { contact } from '@/lib/site'
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12 px-8">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <h3 className="text-xl font-bold mb-4 text-blue-400">Machplastech Australia</h3>
-          <p className="text-gray-300 mb-2">Korea-Australia Industrial Gateway</p>
-          <p className="text-gray-400">419 Malvern Rd</p>
-          <p className="text-gray-400">South Yarra VIC 3141</p>
-          <p className="text-gray-400">Australia</p>
+    <footer className="bg-ink text-[#B9C4CC]">
+      <div className="max-w-[1240px] mx-auto px-6 py-14 grid gap-10 md:grid-cols-4">
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-3">
+            <Seal size={36} color="#FFFFFF" />
+            <span className="text-white font-bold tracking-[0.16em]">MACH</span>
+          </div>
+          <p className="text-sm leading-relaxed">Korea–Australia trade across industrial and medical &amp; cosmetic products.</p>
         </div>
 
-        <div>
-          <h3 className="text-xl font-bold mb-4 text-blue-400">Contact</h3>
-          <p className="text-gray-300 mb-2">Australia: +61 493 468 123</p>
-          <p className="text-gray-300 mb-2">Email: admin@machplastech.com.au</p>
-          <p className="text-gray-400 mt-4">Korea HQ: +82 10 7671-8123</p>
+        <div className="text-sm leading-relaxed">
+          <h3 className="text-white font-bold mb-3">{contact.au.label}</h3>
+          {contact.au.address.map((l) => (
+            <p key={l}>{l}</p>
+          ))}
+          <p className="mt-2">
+            <a href={`tel:${contact.au.tel}`} className="hover:text-white">{contact.au.phone}</a>
+          </p>
         </div>
 
-        <div>
-          <h3 className="text-xl font-bold mb-4 text-blue-400">Services</h3>
-          <p className="text-gray-300">Market Research</p>
-          <p className="text-gray-300">Business Matching</p>
-          <p className="text-gray-300">Logistics Solutions</p>
-          <p className="text-gray-300">After-Sales Support</p>
+        <div className="text-sm leading-relaxed">
+          <h3 className="text-white font-bold mb-3">{contact.kr.label}</h3>
+          <p>{contact.kr.addressKo}</p>
+          <p className="mt-2">
+            <a href={`tel:${contact.kr.tel}`} className="hover:text-white">{contact.kr.phone}</a>
+          </p>
+        </div>
+
+        <div className="text-sm leading-relaxed">
+          <h3 className="text-white font-bold mb-3">Divisions</h3>
+          <p><Link href="/industries" className="hover:text-white">Industrial</Link></p>
+          <p><a href={`mailto:${contact.email.industrial}`} className="hover:text-white break-all">{contact.email.industrial}</a></p>
+          <p className="mt-3"><Link href="/medical-cosmetics" className="hover:text-white">Medical &amp; Cosmetics</Link></p>
+          <p><a href={`mailto:${contact.email.medical}`} className="hover:text-white break-all">{contact.email.medical}</a></p>
         </div>
       </div>
 
-      <div className="text-center pt-8 border-t border-gray-700 text-gray-400">
-        <p>&copy; 2025 Machplastech Australia. All rights reserved.</p>
+      <div className="border-t border-[#2A3B4B]">
+        <div className="max-w-[1240px] mx-auto px-6 py-6 flex flex-wrap justify-between gap-3 text-xs">
+          <span className="text-white font-bold tracking-[0.16em]">MACH MEDICAL &amp; COSMETICS</span>
+          <span>&copy; {new Date().getFullYear()} Mach. All rights reserved.</span>
+        </div>
       </div>
     </footer>
   )
