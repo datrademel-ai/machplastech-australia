@@ -58,7 +58,7 @@ export default function Industries() {
     {
       title: 'Construction Materials',
       subtitle: 'Korean building and finishing materials, sourced for Australian projects',
-      image: '/images/industries/factory.jpg',
+      image: '/images/industries/construction.jpg',
       color: 'text-amber-700',
       items: [
         { name: 'Building Materials', desc: 'Panels, boards and insulation products' },
