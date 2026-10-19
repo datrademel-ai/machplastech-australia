@@ -73,6 +73,7 @@ export default function Home() {
                 <li>Manufacturing and automation equipment</li>
                 <li>Agriculture and food processing machinery</li>
                 <li>Industrial equipment and robotics</li>
+                <li>Construction materials</li>
               </ul>
               <Link href="/industries" className="self-start mt-auto px-[22px] py-3.5 bg-ink text-white font-bold rounded hover:bg-[#22364A] transition">
                 Explore Industrial

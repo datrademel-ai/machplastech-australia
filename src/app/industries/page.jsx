@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const metadata = {
   title: 'Industries We Serve - Machplastech Australia',
-  description: 'Korean technology solutions for Australian agriculture, manufacturing, materials, and industrial sectors',
+  description: 'Korean technology and materials sourcing for Australian agriculture and food processing, manufacturing, advanced materials, industrial equipment and construction',
 }
 
 export default function Industries() {
@@ -53,6 +53,18 @@ export default function Industries() {
         { name: 'Material Handling Systems', desc: 'Conveyors, lifts, and transport solutions' },
         { name: 'Production Line Equipment', desc: 'Assembly and processing machinery' },
         { name: 'Power & Control Systems', desc: 'Electrical and control infrastructure' }
+      ]
+    },
+    {
+      title: 'Construction Materials',
+      subtitle: 'Korean building and finishing materials, sourced for Australian projects',
+      image: '/images/industries/factory.jpg',
+      color: 'text-amber-700',
+      items: [
+        { name: 'Building Materials', desc: 'Panels, boards and insulation products' },
+        { name: 'Interior & Finishing', desc: 'Flooring, tiles, wall finishes and fit-out materials' },
+        { name: 'Waterproofing & Sealants', desc: 'Membranes, sealants and adhesives' },
+        { name: 'Fixtures & Hardware', desc: 'Door and window hardware, fittings and fixings' }
       ]
     }
   ]
